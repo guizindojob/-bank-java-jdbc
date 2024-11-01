@@ -1,6 +1,6 @@
-package domain.conta;
+package br.sesi.bank.bank_java_jdbc.domain.conta;
 
-import domain.cliente.DadosCadastroCliente;
+import br.sesi.bank.bank_java_jdbc.domain.cliente.DadosCadastroCliente;
 
 public class DadosAberturaConta {
     public Integer numero;

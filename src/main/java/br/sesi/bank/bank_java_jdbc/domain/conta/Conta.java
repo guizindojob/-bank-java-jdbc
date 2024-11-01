@@ -1,19 +1,21 @@
-package domain.conta;
+package br.sesi.bank.bank_java_jdbc.domain.conta;
 
-import domain.cliente.Cliente;
+import br.sesi.bank.bank_java_jdbc.domain.cliente.Cliente;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Conta {
-    Integer numero;
-    BigDecimal saldo;
-    Cliente titular;
+    private Integer numero;
+    private BigDecimal saldo;
+    private Cliente titular;
+    private boolean ativo;
 
-    public Conta (Integer numero, BigDecimal saldo, Cliente titular) {
+    public Conta (Integer numero, BigDecimal saldo, Cliente titular, Boolean ativo) {
         this.numero = numero;
         this.titular = titular;
         this.saldo = saldo;
+        this.ativo = ativo;
     }
     public boolean possuiSaldo(){
         return this.saldo.compareTo(BigDecimal.ZERO) != 0;
@@ -52,5 +54,13 @@ public class Conta {
                 ", saldo=" + saldo +
                 ", titular=" + titular +
                 '}';
+    }
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
     }
 }

@@ -1,10 +1,10 @@
-package controller;
+package br.sesi.bank.bank_java_jdbc.controller;
 
-import domain.cliente.DadosCadastroCliente;
-import domain.conta.Conta;
-import domain.conta.DadosAberturaConta;
-import exceptions.RegraDeNegocioException;
-import service.ContaService;
+import br.sesi.bank.bank_java_jdbc.domain.cliente.DadosCadastroCliente;
+import br.sesi.bank.bank_java_jdbc.domain.conta.Conta;
+import br.sesi.bank.bank_java_jdbc.domain.conta.DadosAberturaConta;
+import br.sesi.bank.bank_java_jdbc.exceptions.RegraDeNegocioException;
+import br.sesi.bank.bank_java_jdbc.service.ContaService;
 
 
 import java.math.BigDecimal;
@@ -48,6 +48,7 @@ public class BankJavaController {
                         break;
                     case 6:
                         realizarDeposito();
+                        break;
                     case 7:
                         realizarTransferencia();
                         break;
